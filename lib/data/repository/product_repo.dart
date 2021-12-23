@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/dio/dio_client.dart';
-import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/exception/api_error_handler.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
-import 'package:flutter_sixvalley_ecommerce/helper/product_type.dart';
-import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
+import 'package:hibuoisang/data/datasource/remote/dio/dio_client.dart';
+import 'package:hibuoisang/data/datasource/remote/exception/api_error_handler.dart';
+import 'package:hibuoisang/data/model/response/base/api_response.dart';
+import 'package:hibuoisang/helper/product_type.dart';
+import 'package:hibuoisang/utill/app_constants.dart';
 
 class ProductRepo {
   final DioClient dioClient;

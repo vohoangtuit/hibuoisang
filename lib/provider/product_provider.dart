@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/product_model.dart';
-import 'package:flutter_sixvalley_ecommerce/data/repository/product_repo.dart';
-import 'package:flutter_sixvalley_ecommerce/helper/api_checker.dart';
-import 'package:flutter_sixvalley_ecommerce/helper/product_type.dart';
+import 'package:hibuoisang/data/model/response/base/api_response.dart';
+import 'package:hibuoisang/data/model/response/product_model.dart';
+import 'package:hibuoisang/data/repository/product_repo.dart';
+import 'package:hibuoisang/helper/api_checker.dart';
+import 'package:hibuoisang/helper/product_type.dart';
 
 class ProductProvider extends ChangeNotifier {
   final ProductRepo productRepo;

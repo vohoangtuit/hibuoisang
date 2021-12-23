@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/body/login_model.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/body/register_model.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/base/error_response.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/response_model.dart';
-import 'package:flutter_sixvalley_ecommerce/data/model/response/social_login_model.dart';
-import 'package:flutter_sixvalley_ecommerce/data/repository/auth_repo.dart';
-import 'package:flutter_sixvalley_ecommerce/helper/api_checker.dart';
+import 'package:hibuoisang/data/model/body/login_model.dart';
+import 'package:hibuoisang/data/model/body/register_model.dart';
+import 'package:hibuoisang/data/model/response/base/api_response.dart';
+import 'package:hibuoisang/data/model/response/base/error_response.dart';
+import 'package:hibuoisang/data/model/response/response_model.dart';
+import 'package:hibuoisang/data/model/response/social_login_model.dart';
+import 'package:hibuoisang/data/repository/auth_repo.dart';
+import 'package:hibuoisang/helper/api_checker.dart';
 
 class AuthProvider with ChangeNotifier {
   final AuthRepo authRepo;

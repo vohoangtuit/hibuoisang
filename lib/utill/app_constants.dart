@@ -1,4 +1,4 @@
-import 'package:flutter_sixvalley_ecommerce/data/model/response/language_model.dart';
+import 'package:hibuoisang/data/model/response/language_model.dart';
 
 class AppConstants {
   static const String APP_NAME = '6valley';
