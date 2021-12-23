@@ -902,13 +902,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_sixvalley_ecommerce",
+      "name": "hibuoisang",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-12-23T08:36:18.042829Z",
+  "generated": "2021-12-23T09:04:36.865843Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }
