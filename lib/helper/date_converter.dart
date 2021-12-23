@@ -18,32 +18,18 @@ class DateConverter {
   }
 
   static String isoStringToLocalTimeOnly(String dateTime) {
-    return DateFormat('yyyy-MM-dd HH:mm:ss').format(isoStringToLocalDate(dateTime));
+    return DateFormat('HH:mm').format(isoStringToLocalDate(dateTime));
   }
 
   static String isoStringToLocalDateOnly(String dateTime) {
-    return DateFormat('dd MMM yyyy').format(isoStringToLocalDate(dateTime));
+    return DateFormat('dd:MM:yy').format(isoStringToLocalDate(dateTime));
   }
 
   static String localDateToIsoString(DateTime dateTime) {
     return DateFormat('yyyy-MM-dd HH:mm:ss').format(dateTime.toUtc());
   }
 
-  static String localDateToIsoStringAMPM(DateTime dateTime) {
-    return DateFormat('h:mm a | d-MMM ').format(dateTime.toLocal());
-  }
-
-  static String isoStringToLocalAMPM(String dateTime) {
-    return DateFormat('a').format(isoStringToLocalDate(dateTime));
-  }
-
-  static bool isInThisYear(String date) {
-    DateTime _currentTime = DateTime.now();
-    DateTime _orderTime = isoStringToLocalDate(date);
-    return _currentTime.year == _orderTime.year;
-  }
-
-  static int getMonthIndex(String date) {
-    return isoStringToLocalDate(date).month;
+  static String isoStringToLocalDateAndTime(String dateTime) {
+    return DateFormat('dd-MMM-yyyy hh:mm a').format(isoStringToLocalDate(dateTime));
   }
 }

@@ -1,4 +1,4 @@
-class OnBoardingModel{
+class OnboardingModel {
   String _imageUrl;
   String _title;
   String _description;
@@ -7,5 +7,5 @@ class OnBoardingModel{
   get title => _title;
   get description => _description;
 
-  OnBoardingModel(this._imageUrl, this._title, this._description);
+  OnboardingModel(this._imageUrl, this._title, this._description);
 }

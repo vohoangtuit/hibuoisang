@@ -1,6 +1,6 @@
-# sixvalley_vendor_app
+# flutter_sixvalley_ecommerce
 
-A new Flutter application.
+A new Flutter setup application for starting a project.
 
 ## Getting Started
 

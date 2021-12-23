@@ -1,131 +1,53 @@
-import 'package:flutter/material.dart';
-import 'package:sixvalley_vendor_app/data/model/response/base/api_response.dart';
-import 'package:sixvalley_vendor_app/data/model/response/base/error_response.dart';
-import 'package:sixvalley_vendor_app/data/model/response/order_details_model.dart';
-import 'package:sixvalley_vendor_app/data/model/response/order_model.dart';
-import 'package:sixvalley_vendor_app/data/model/response/response_model.dart';
-import 'package:sixvalley_vendor_app/data/repository/order_repo.dart';
-import 'package:sixvalley_vendor_app/helper/api_checker.dart';
-import 'package:sixvalley_vendor_app/utill/app_constants.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/body/order_place_model.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/base/error_response.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/cart_model.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/order_details.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/order_model.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/shipping_method_model.dart';
+import 'package:flutter_sixvalley_ecommerce/data/repository/order_repo.dart';
+import 'package:flutter_sixvalley_ecommerce/helper/api_checker.dart';
+import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
 
-class OrderProvider extends ChangeNotifier {
-  final OrderListRepo orderListRepo;
-  OrderProvider({@required this.orderListRepo});
-
-
-  List<OrderModel> _orderList;
-  List<OrderModel> get orderList => _orderList != null ? _orderList.reversed.toList() : _orderList;
+class OrderProvider with ChangeNotifier {
+  final OrderRepo orderRepo;
+  OrderProvider({@required this.orderRepo});
 
   List<OrderModel> _pendingList;
-  List<OrderModel> _processing;
   List<OrderModel> _deliveredList;
-  List<OrderModel> _returnList;
   List<OrderModel> _canceledList;
-  List<OrderModel> _failedList;
-  List<OrderModel> _confirmedList;
-  List<OrderModel> _outForDeliveryList;
-  List<OrderModel> get pendingList => _pendingList != null ? _pendingList.reversed.toList() : _pendingList;
-  List<OrderModel> get processing => _processing != null ? _processing.reversed.toList() : _processing;
-  List<OrderModel> get deliveredList => _deliveredList != null ? _deliveredList.reversed.toList() : _deliveredList;
-  List<OrderModel> get returnList => _returnList != null ? _returnList.reversed.toList() : _returnList;
-  List<OrderModel> get canceledList => _canceledList != null ? _canceledList.reversed.toList() : _canceledList;
-  List<OrderModel> get confirmedList => _confirmedList != null ? _confirmedList.reversed.toList() : _confirmedList;
-  List<OrderModel> get outForDeliveryList => _outForDeliveryList != null ? _outForDeliveryList.reversed.toList() : _outForDeliveryList;
-  List<OrderModel> get failedList => _failedList != null ? _failedList.reversed.toList() : _failedList;
-
-
-
-  List<OrderDetailsModel> _orderDetails;
-  List<OrderDetailsModel> get orderDetails => _orderDetails;
+  int _addressIndex;
+  int _shippingIndex;
   bool _isLoading = false;
-  bool get isLoading => _isLoading;
-
-  int _orderTypeIndex = 0;
-  int get orderTypeIndex => _orderTypeIndex;
-
-  List<String> _orderStatusList = [];
-  String _orderStatusType = '';
-  List<String> get orderStatusList => _orderStatusList;
-  String get orderStatusType => _orderStatusType;
-
-  String _addOrderStatusErrorText;
-  String get addOrderStatusErrorText => _addOrderStatusErrorText;
-
-  List<String> _paymentImageList;
-  List<String> get paymentImageList => _paymentImageList;
-
+  List<ShippingMethodModel> _shippingList;
   int _paymentMethodIndex = 0;
+
+  List<OrderModel> get pendingList => _pendingList != null ? _pendingList.reversed.toList() : _pendingList;
+  List<OrderModel> get deliveredList => _deliveredList != null ? _deliveredList.reversed.toList() : _deliveredList;
+  List<OrderModel> get canceledList => _canceledList != null ? _canceledList.reversed.toList() : _canceledList;
+  int get addressIndex => _addressIndex;
+  int get shippingIndex => _shippingIndex;
+  bool get isLoading => _isLoading;
+  List<ShippingMethodModel> get shippingList => _shippingList;
   int get paymentMethodIndex => _paymentMethodIndex;
 
-  void setOrderStatusErrorText(String errorText) {
-    _addOrderStatusErrorText = errorText;
-    notifyListeners();
-  }
-
-  Future<ResponseModel> updateOrderStatus(int id, String status) async {
-    _isLoading = true;
-    notifyListeners();
-
-    ResponseModel responseModel;
-    ApiResponse apiResponse;
-    apiResponse = await orderListRepo.orderStatus(id, status);
-
-    _isLoading = false;
-
+  Future<void> initOrderList(BuildContext context) async {
+    ApiResponse apiResponse = await orderRepo.getOrderList();
     if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
-      String message = apiResponse.response.data.toString();
-      responseModel = ResponseModel(true, message);
-      _addOrderStatusErrorText = message;
-      _orderDetails[0].deliveryStatus = status;
-    } else {
-      String errorMessage = apiResponse.error.toString();
-      if (apiResponse.error is String) {
-        print(apiResponse.error.toString());
-        errorMessage = apiResponse.error.toString();
-      } else {
-        ErrorResponse errorResponse = apiResponse.error;
-        print(errorResponse.errors[0].message);
-        errorMessage = errorResponse.errors[0].message;
-      }
-      _addOrderStatusErrorText = errorMessage;
-      responseModel = ResponseModel(false, errorMessage);
-    }
-    notifyListeners();
-    return responseModel;
-  }
-
-
-  Future<void> getOrderList(BuildContext context) async {
-    ApiResponse apiResponse = await orderListRepo.getOrderList();
-    if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
-      _orderList = [];
       _pendingList = [];
-      _processing = [];
       _deliveredList = [];
-      _returnList = [];
       _canceledList = [];
-      _confirmedList = [];
-      _outForDeliveryList = [];
-      _failedList = [];
       apiResponse.response.data.forEach((order) {
         OrderModel orderModel = OrderModel.fromJson(order);
-        _orderList.add(orderModel);
-        if (orderModel.orderStatus == AppConstants.PENDING) {
+        if (orderModel.orderStatus == AppConstants.PENDING || orderModel.orderStatus == AppConstants.CONFIRMED || orderModel.orderStatus ==AppConstants.OUT_FOR_DELIVERY
+            || orderModel.orderStatus == AppConstants.PROCESSING || orderModel.orderStatus == AppConstants.PROCESSED) {
           _pendingList.add(orderModel);
-        } else if (orderModel.orderStatus == AppConstants.PROCESSING || orderModel.orderStatus == AppConstants.PROCESSED) {
-          _processing.add(orderModel);
-        }else if (orderModel.orderStatus == AppConstants.DELIVERED) {
+        } else if (orderModel.orderStatus == AppConstants.DELIVERED) {
           _deliveredList.add(orderModel);
-        }else if ( orderModel.orderStatus == AppConstants.RETURNED) {
-          _returnList.add(orderModel);
-        } else if (orderModel.orderStatus == AppConstants.FAILED) {
-          _failedList.add(orderModel);
-        }else if (orderModel.orderStatus == AppConstants.CANCELLED) {
+        } else if (orderModel.orderStatus == AppConstants.CANCELLED || orderModel.orderStatus == AppConstants.FAILED
+            || orderModel.orderStatus == AppConstants.RETURNED) {
           _canceledList.add(orderModel);
-        }else if (orderModel.orderStatus == AppConstants.CONFIRMED) {
-          _confirmedList.add(orderModel);
-        }else if (orderModel.orderStatus == AppConstants.OUT_FOR_DELIVERY) {
-          _outForDeliveryList.add(orderModel);
         }
       });
     } else {
@@ -134,17 +56,21 @@ class OrderProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  int _orderTypeIndex = 0;
+  int get orderTypeIndex => _orderTypeIndex;
 
   void setIndex(int index) {
     _orderTypeIndex = index;
     notifyListeners();
   }
 
+  List<OrderDetailsModel> _orderDetails;
+  List<OrderDetailsModel> get orderDetails => _orderDetails;
 
-  Future<List<OrderDetailsModel>> getOrderDetails( String orderID , BuildContext context) async {
+  void getOrderDetails(String orderID, BuildContext context, String languageCode) async {
     _orderDetails = null;
-    _addOrderStatusErrorText = '';
-    ApiResponse apiResponse = await orderListRepo.getOrderDetails(orderID);
+    notifyListeners();
+    ApiResponse apiResponse = await orderRepo.getOrderDetails(orderID, languageCode);
     if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
       _orderDetails = [];
       apiResponse.response.data.forEach((order) => _orderDetails.add(OrderDetailsModel.fromJson(order)));
@@ -152,28 +78,84 @@ class OrderProvider extends ChangeNotifier {
       ApiChecker.checkApi(context, apiResponse);
     }
     notifyListeners();
-    return _orderDetails;
   }
 
-
-  void initOrderStatusList(BuildContext context) async {
-    ApiResponse apiResponse = await orderListRepo.getOrderStatusList();
+  Future<void> placeOrder(OrderPlaceModel orderPlaceModel, Function callback, List<CartModel> cartList, String addressID, String couponCode) async {
+    _isLoading = true;
+    notifyListeners();
+    ApiResponse apiResponse = await orderRepo.placeOrder(addressID, couponCode);
+    _isLoading = false;
     if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
-      _orderStatusList.clear();
-      _orderStatusList.addAll(apiResponse.response.data);
-      _orderStatusType = apiResponse.response.data[0];
+      _addressIndex = null;
+      String message = apiResponse.response.data.toString();
+      callback(true, message, '', cartList);
+    } else {
+      String errorMessage;
+      if (apiResponse.error is String) {
+        print(apiResponse.error.toString());
+        errorMessage = apiResponse.error.toString();
+      } else {
+        ErrorResponse errorResponse = apiResponse.error;
+        print(errorResponse.errors[0].message);
+        errorMessage = errorResponse.errors[0].message;
+      }
+      callback(false, errorMessage, '-1', cartList);
+    }
+    notifyListeners();
+  }
+
+  void stopLoader() {
+    _isLoading = false;
+    notifyListeners();
+  }
+
+  void setAddressIndex(int index) {
+    _addressIndex = index;
+    notifyListeners();
+  }
+
+  Future<void> initShippingList(BuildContext context, int sellerID) async {
+    _paymentMethodIndex = 0;
+    _shippingIndex = null;
+    _addressIndex = null;
+    ApiResponse apiResponse = await orderRepo.getShippingMethod(sellerID);
+    if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
+      _shippingList = [];
+      apiResponse.response.data.forEach((shippingMethod) => _shippingList.add(ShippingMethodModel.fromJson(shippingMethod)));
     } else {
       ApiChecker.checkApi(context, apiResponse);
     }
     notifyListeners();
   }
 
-  void updateStatus(String value) {
-    _orderStatusType = value;
+  void setSelectedShippingAddress(int index) {
+    _shippingIndex = index;
     notifyListeners();
   }
 
-  void setPaymentMethodIndex(int index) {
+  OrderModel _trackingModel;
+  OrderModel get trackingModel => _trackingModel;
+
+  Future<void> initTrackingInfo(String orderID, OrderModel orderModel, bool fromDetails, BuildContext context) async {
+    if(fromDetails) {
+      _orderDetails = null;
+    }
+    if(orderModel == null) {
+      _trackingModel = null;
+      notifyListeners();
+      ApiResponse apiResponse = await orderRepo.getTrackingInfo(orderID);
+      if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
+        _trackingModel = OrderModel.fromJson(apiResponse.response.data);
+      } else {
+        ApiChecker.checkApi(context, apiResponse);
+      }
+      notifyListeners();
+    }else {
+      _trackingModel = orderModel;
+    }
+  }
+
+  void setPaymentMethod(int index) {
     _paymentMethodIndex = index;
     notifyListeners();
   }

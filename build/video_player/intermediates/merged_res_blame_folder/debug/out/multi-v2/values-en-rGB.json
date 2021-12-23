@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/video_player/intermediates/res/merged/debug/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/video_player/intermediates/merged_res/debug/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
-                    "source": "/Users/vohoangtuit/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "/Users/vohoangtuit/.gradle/caches/transforms-3/7536bf45c9cd3eaedbe513fdd7ab2141/transformed/core-1.1.0/res/values-en-rGB/values-en-rGB.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/video_player/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
-                    "source": "/Users/vohoangtuit/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "/Users/vohoangtuit/.gradle/caches/transforms-3/7536bf45c9cd3eaedbe513fdd7ab2141/transformed/core-1.1.0/res/values-en-rGB/values-en-rGB.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

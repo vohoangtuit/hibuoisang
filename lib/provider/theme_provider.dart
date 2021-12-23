@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sixvalley_vendor_app/utill/app_constants.dart';
 
 class ThemeProvider with ChangeNotifier {
   final SharedPreferences sharedPreferences;
@@ -8,7 +8,7 @@ class ThemeProvider with ChangeNotifier {
     _loadCurrentTheme();
   }
 
-  bool _darkTheme = true;
+  bool _darkTheme = false;
   bool get darkTheme => _darkTheme;
 
   void toggleTheme() {

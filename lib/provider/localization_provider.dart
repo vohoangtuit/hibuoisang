@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sixvalley_vendor_app/utill/app_constants.dart';
 
 class LocalizationProvider extends ChangeNotifier {
   final SharedPreferences sharedPreferences;
@@ -9,21 +9,22 @@ class LocalizationProvider extends ChangeNotifier {
     _loadCurrentLanguage();
   }
 
-  int _languageIndex;
   Locale _locale = Locale(AppConstants.languages[0].languageCode, AppConstants.languages[0].countryCode);
   bool _isLtr = true;
+  int _languageIndex;
+
   Locale get locale => _locale;
   bool get isLtr => _isLtr;
   int get languageIndex => _languageIndex;
 
-
-  void setLanguage(Locale locale, int index) {
+  void setLanguage(Locale locale) {
     _locale = locale;
-    _languageIndex = index;
-    if(_locale.languageCode == 'ar') {
-      _isLtr = false;
-    }else {
-      _isLtr = true;
+    _isLtr = _locale.languageCode != 'ar';
+    for(int index=0; index<AppConstants.languages.length; index++) {
+      if(AppConstants.languages[index].languageCode == locale.languageCode) {
+        _languageIndex = index;
+        break;
+      }
     }
     _saveLanguage(_locale);
     notifyListeners();
@@ -32,13 +33,13 @@ class LocalizationProvider extends ChangeNotifier {
   _loadCurrentLanguage() async {
     _locale = Locale(sharedPreferences.getString(AppConstants.LANGUAGE_CODE) ?? AppConstants.languages[0].languageCode,
         sharedPreferences.getString(AppConstants.COUNTRY_CODE) ?? AppConstants.languages[0].countryCode);
+    _isLtr = _locale.languageCode != 'ar';
     for(int index=0; index<AppConstants.languages.length; index++) {
-      if(AppConstants.languages[index].languageCode == _locale.languageCode) {
+      if(AppConstants.languages[index].languageCode == locale.languageCode) {
         _languageIndex = index;
         break;
       }
     }
-    _isLtr = _locale.languageCode != 'ar';
     notifyListeners();
   }
 

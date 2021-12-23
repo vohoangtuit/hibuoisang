@@ -1,24 +1,9 @@
-class ShippingModel {
-  int id;
-  String title;
-  String duration;
-  double cost;
+import 'package:flutter_sixvalley_ecommerce/data/model/response/shipping_method_model.dart';
 
-  ShippingModel({this.id, this.title, this.duration, this.cost});
+class ShippingModel{
+  int shippingIndex;
+  String groupId;
+  List<ShippingMethodModel> shippingMethodList;
 
-  ShippingModel.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    title = json['title'];
-    duration = json['duration'];
-    cost = json['cost'].toDouble();
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['duration'] = this.duration;
-    data['cost'] = this.cost;
-    return data;
-  }
+  ShippingModel(this.shippingIndex, this.groupId, this.shippingMethodList);
 }

@@ -1,4 +1,4 @@
+com/hibuoisang/BuildConfig.java
+ com.hibuoisang.BuildConfig
 io/flutter/plugins/GeneratedPluginRegistrant.java
  io.flutter.plugins.GeneratedPluginRegistrant
-com/example/sixvalley_vendor_app/BuildConfig.java
- com.example.sixvalley_vendor_app.BuildConfig

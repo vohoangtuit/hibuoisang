@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/dio/dio_client.dart';
+import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/exception/api_error_handler.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
+import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sixvalley_vendor_app/data/datasource/remote/dio/dio_client.dart';
-import 'package:sixvalley_vendor_app/data/datasource/remote/exception/api_error_handler.dart';
-import 'package:sixvalley_vendor_app/data/model/response/base/api_response.dart';
-import 'package:sixvalley_vendor_app/utill/app_constants.dart';
 
 class SplashRepo {
   final DioClient dioClient;
@@ -26,6 +26,9 @@ class SplashRepo {
     if (!sharedPreferences.containsKey(AppConstants.SEARCH_ADDRESS)) {
       sharedPreferences.setStringList(AppConstants.SEARCH_ADDRESS, []);
     }
+    if (!sharedPreferences.containsKey(AppConstants.INTRO)) {
+      sharedPreferences.setBool(AppConstants.INTRO, true);
+    }
     if(!sharedPreferences.containsKey(AppConstants.CURRENCY)) {
       sharedPreferences.setString(AppConstants.CURRENCY, '');
     }
@@ -37,6 +40,14 @@ class SplashRepo {
 
   void setCurrency(String currencyCode) {
     sharedPreferences.setString(AppConstants.CURRENCY, currencyCode);
+  }
+
+  void disableIntro() {
+    sharedPreferences.setBool(AppConstants.INTRO, false);
+  }
+
+  bool showIntro() {
+    return sharedPreferences.getBool(AppConstants.INTRO);
   }
 
 

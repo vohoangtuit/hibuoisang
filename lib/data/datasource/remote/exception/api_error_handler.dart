@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-
-import '../../../model/response/base/error_response.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/base/error_response.dart';
 
 class ApiErrorHandler {
   static dynamic getMessage(error) {

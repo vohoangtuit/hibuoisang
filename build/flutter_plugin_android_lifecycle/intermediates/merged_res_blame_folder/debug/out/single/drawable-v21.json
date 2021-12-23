@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_plugin_android_lifecycle/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
-        "source": "/Users/vohoangtuit/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/drawable-v21/notification_action_background.xml"
+        "merged": "/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_plugin_android_lifecycle/intermediates/merged_res/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/vohoangtuit/.gradle/caches/transforms-3/7536bf45c9cd3eaedbe513fdd7ab2141/transformed/core-1.1.0/res/drawable-v21/notification_action_background.xml"
     }
 ]

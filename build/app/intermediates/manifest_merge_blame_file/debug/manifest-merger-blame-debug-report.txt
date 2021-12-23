@@ -1,112 +1,562 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.sixvalley_vendor_app"
-4    android:versionCode="1"
-5    android:versionName="1.0.0" >
-6
-7    <uses-sdk
-8        android:minSdkVersion="21"
-9        android:targetSdkVersion="30" />
-10    <!--
-11         Flutter needs it to communicate with the running application
-12         to allow setting breakpoints, to provide hot reload, etc.
-13    -->
-14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:4:5-66
-14-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:4:22-64
-15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[:connectivity] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
-15-->[:connectivity] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
-16
-17    <application
-17-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:5:4-42:19
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] /Users/vohoangtuit/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:7:9-43
-21        android:label="6Valley Vendor" >
-21-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:6:9-39
-22        <activity
-22-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:8:9-36:20
-23            android:name="com.example.sixvalley_vendor_app.MainActivity"
-23-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:9:13-41
-24            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-24-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:12:13-163
-25            android:hardwareAccelerated="true"
-25-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:13:13-47
-26            android:launchMode="singleTop"
-26-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:10:13-43
-27            android:theme="@style/LaunchTheme"
-27-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:11:13-47
-28            android:windowSoftInputMode="adjustResize" >
-28-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:14:13-55
-29
-30            <!--
-31                 Specifies an Android theme to apply to this Activity as soon as
-32                 the Android process has started. This theme is visible to the user
-33                 while the Flutter UI initializes. After that, this theme continues
-34                 to determine the Window background behind the Flutter UI.
-35            -->
-36            <meta-data
-36-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:19:13-22:17
-37                android:name="io.flutter.embedding.android.NormalTheme"
-37-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:20:15-70
-38                android:resource="@style/NormalTheme" />
-38-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:21:15-52
-39            <!--
-40                 Displays an Android View that continues showing the launch screen
-41                 Drawable until Flutter paints its first frame, then this splash
-42                 screen fades out. A splash screen is useful to avoid any visual
-43                 gap between the end of Android's launch screen and the painting of
-44                 Flutter's first frame.
-45            -->
-46            <meta-data
-46-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:28:13-31:17
-47                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-47-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:29:15-79
-48                android:resource="@drawable/launch_background" />
-48-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:30:15-61
-49
-50            <intent-filter>
-50-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:32:13-35:29
-51                <action android:name="android.intent.action.MAIN" />
-51-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:33:17-68
-51-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:33:25-66
-52
-53                <category android:name="android.intent.category.LAUNCHER" />
-53-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:34:17-76
-53-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:34:27-74
-54            </intent-filter>
-55        </activity>
-56        <!--
-57             Don't delete the meta-data below.
-58             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-59        -->
-60        <meta-data
-60-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:39:9-41:33
-61            android:name="flutterEmbedding"
-61-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:40:13-44
-62            android:value="2" />
-62-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:41:13-30
+3    package="com.hibuoisang"
+4    android:targetSandboxVersion="1"
+5    android:versionCode="2"
+6    android:versionName="1.0.1" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+10        android:targetSdkVersion="30" />
+11    <!--
+12         Flutter needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:10:5-67
+15-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:10:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:11:5-79
+16-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:11:22-76
+17    <uses-permission android:name="android.permission.WAKE_LOCK" />
+17-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:12:5-68
+17-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:12:22-65
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:13:5-80
+18-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:13:22-78
+19
+20    <queries>
+20-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:14:5-27:15
+21        <intent>
+21-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:15:9-18:18
+22            <action android:name="android.intent.action.VIEW" />
+22-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:16:13-65
+22-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:16:21-62
+23
+24            <data android:scheme="https" />
+24-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:13-44
+24-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:19-41
+25        </intent>
+26        <intent>
+26-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:19:9-22:18
+27            <action android:name="android.intent.action.DIAL" />
+27-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:20:13-65
+27-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:20:21-62
+28
+29            <data android:scheme="tel" />
+29-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:13-44
+29-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:19-41
+30        </intent>
+31        <intent>
+31-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:23:9-26:18
+32            <action android:name="android.intent.action.SEND" />
+32-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:24:13-65
+32-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:24:21-62
+33
+34            <data android:mimeType="*/*" />
+34-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:13-44
+35        </intent>
+36    </queries>
+37
+38    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+38-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-80
+38-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-77
+39    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+39-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-81
+39-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-78
+40    <uses-permission android:name="android.permission.VIBRATE" />
+40-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-66
+40-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-63
+41    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+41-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+41-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+42    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+42-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-79
+42-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-76
+43    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+43-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:25:5-82
+43-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:25:22-79
+44    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+44-->[com.android.installreferrer:installreferrer:1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/4491a7309357435e171aa98b3f668f19/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+44-->[com.android.installreferrer:installreferrer:1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/4491a7309357435e171aa98b3f668f19/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+45
+46    <application
+46-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:29:5-92:19
+47        android:name="com.hibuoisang.Application"
+47-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:30:9-36
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.3.2] /Users/vohoangtuit/.gradle/caches/transforms-3/155d28d81baed32679c3f399e7e41d70/transformed/core-1.3.2/AndroidManifest.xml:24:18-86
+49        android:debuggable="true"
+50        android:icon="@mipmap/ic_launcher"
+50-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:35:9-43
+51        android:label="HiBuoiSang"
+51-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:31:9-35
+52        android:networkSecurityConfig="@xml/network_security_config"
+52-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:34:9-69
+53        android:requestLegacyExternalStorage="true"
+53-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:32:9-52
+54        android:supportsRtl="true"
+54-->[com.facebook.android:facebook-login:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/810600c3966077236f31bb0bfb877a6c/transformed/jetified-facebook-login-12.1.0/AndroidManifest.xml:28:18-44
+55        android:usesCleartextTraffic="true" >
+55-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:33:9-44
+56        <activity
+56-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:36:9-68:20
+57            android:name="com.hibuoisang.MainActivity"
+57-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:37:13-41
+58            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+58-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:40:13-163
+59            android:hardwareAccelerated="true"
+59-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:41:13-47
+60            android:launchMode="singleTop"
+60-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:38:13-43
+61            android:theme="@style/LaunchTheme"
+61-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:39:13-47
+62            android:windowSoftInputMode="adjustResize" >
+62-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:42:13-55
 63
-64        <provider
-64-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
-65            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-65-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
-66            android:authorities="com.example.sixvalley_vendor_app.flutter.image_provider"
-66-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
-67            android:exported="false"
-67-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
-68            android:grantUriPermissions="true" >
-68-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
-69            <meta-data
-69-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
-70                android:name="android.support.FILE_PROVIDER_PATHS"
-70-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
-71                android:resource="@xml/flutter_image_picker_file_paths" />
-71-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
-72        </provider>
-73    </application>
-74
-75</manifest>
+64            <!--
+65                 Specifies an Android theme to apply to this Activity as soon as
+66                 the Android process has started. This theme is visible to the user
+67                 while the Flutter UI initializes. After that, this theme continues
+68                 to determine the Window background behind the Flutter UI.
+69            -->
+70            <meta-data
+70-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:47:13-50:17
+71                android:name="io.flutter.embedding.android.NormalTheme"
+71-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:48:15-70
+72                android:resource="@style/NormalTheme" />
+72-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:49:15-52
+73            <!--
+74                 Displays an Android View that continues showing the launch screen
+75                 Drawable until Flutter paints its first frame, then this splash
+76                 screen fades out. A splash screen is useful to avoid any visual
+77                 gap between the end of Android's launch screen and the painting of
+78                 Flutter's first frame.
+79            -->
+80            <meta-data
+80-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:56:13-59:17
+81                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+81-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:57:15-79
+82                android:resource="@drawable/launch_background" />
+82-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:58:15-61
+83
+84            <intent-filter>
+84-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:60:13-63:29
+85                <action android:name="android.intent.action.MAIN" />
+85-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:61:17-68
+85-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:61:25-66
+86
+87                <category android:name="android.intent.category.LAUNCHER" />
+87-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:62:17-76
+87-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:62:27-74
+88            </intent-filter>
+89            <intent-filter>
+89-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:64:13-67:29
+90                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+90-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:65:17-69
+90-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:65:25-66
+91
+92                <category android:name="android.intent.category.DEFAULT" />
+92-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:66:17-76
+92-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:66:27-73
+93            </intent-filter>
+94        </activity>
+95        <!--
+96             Don't delete the meta-data below.
+97             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+98        -->
+99        <meta-data
+99-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:71:9-73:33
+100            android:name="flutterEmbedding"
+100-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:72:13-44
+101            android:value="2" />
+101-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:73:13-30
+102        <meta-data
+102-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:74:9-75:54
+103            android:name="com.facebook.sdk.ApplicationId"
+103-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:74:20-65
+104            android:value="@string/facebook_app_id" />
+104-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:75:13-52
+105
+106        <activity
+106-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:77:9-80:48
+107            android:name="com.facebook.FacebookActivity"
+107-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:77:19-63
+108            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+108-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:78:13-113
+109            android:label="@string/app_name"
+109-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:80:13-45
+110            android:theme="@style/com_facebook_activity_theme" />
+110-->[com.facebook.android:facebook-common:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/d6caf4b231be2f64d2dfeced8b04bb69/transformed/jetified-facebook-common-12.1.0/AndroidManifest.xml:33:13-63
+111        <activity
+111-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:81:9-90:20
+112            android:name="com.facebook.CustomTabActivity"
+112-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:82:13-58
+113            android:exported="true" >
+113-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:83:13-36
+114            <intent-filter>
+114-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:84:13-89:29
+115                <action android:name="android.intent.action.VIEW" />
+115-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:16:13-65
+115-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:16:21-62
+116
+117                <category android:name="android.intent.category.DEFAULT" />
+117-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:66:17-76
+117-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:66:27-73
+118                <category android:name="android.intent.category.BROWSABLE" />
+118-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:87:17-78
+118-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:87:27-75
+119
+120                <data android:scheme="@string/fb_login_protocol_scheme" />
+120-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:13-44
+120-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:19-41
+121            </intent-filter>
+122            <intent-filter>
+122-->[com.facebook.android:facebook-common:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/d6caf4b231be2f64d2dfeced8b04bb69/transformed/jetified-facebook-common-12.1.0/AndroidManifest.xml:39:13-48:29
+123                <action android:name="android.intent.action.VIEW" />
+123-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:16:13-65
+123-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:16:21-62
+124
+125                <category android:name="android.intent.category.DEFAULT" />
+125-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:66:17-76
+125-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:66:27-73
+126                <category android:name="android.intent.category.BROWSABLE" />
+126-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:87:17-78
+126-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:87:27-75
+127
+128                <data
+128-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:13-44
+129                    android:host="cct.com.hibuoisang"
+130                    android:scheme="fbconnect" />
+130-->/Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/android/app/src/main/AndroidManifest.xml:17:19-41
+131            </intent-filter>
+132        </activity>
+133
+134        <service
+134-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-15:72
+135            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+135-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-107
+136            android:exported="false"
+136-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-37
+137            android:permission="android.permission.BIND_JOB_SERVICE" />
+137-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-69
+138        <service
+138-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-22:19
+139            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+139-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-97
+140            android:exported="false" >
+140-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+141            <intent-filter>
+141-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-21:29
+142                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+142-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-78
+142-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-75
+143            </intent-filter>
+144        </service>
+145
+146        <receiver
+146-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:9-31:20
+147            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+147-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-98
+148            android:exported="true"
+148-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-36
+149            android:permission="com.google.android.c2dm.permission.SEND" >
+149-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-73
+150            <intent-filter>
+150-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-30:29
+151                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+151-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-81
+151-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-78
+152            </intent-filter>
+153        </receiver>
+154
+155        <service
+155-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:9-37:19
+156            android:name="com.google.firebase.components.ComponentDiscoveryService"
+156-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:18-89
+157            android:directBootAware="true"
+157-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+158            android:exported="false" >
+158-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:51:13-37
+159            <meta-data
+159-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-36:85
+160                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+160-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:35:17-128
+161                android:value="com.google.firebase.components.ComponentRegistrar" />
+161-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:36:17-82
+162            <meta-data
+162-->[:firebase_core] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+163                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+163-->[:firebase_core] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+164                android:value="com.google.firebase.components.ComponentRegistrar" />
+164-->[:firebase_core] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+165            <meta-data
+165-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:52:13-54:85
+166                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+166-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:53:17-119
+167                android:value="com.google.firebase.components.ComponentRegistrar" />
+167-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:54:17-82
+168            <meta-data
+168-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/f822e49a80128d064da04acd5fadcff9/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
+169                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+169-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/f822e49a80128d064da04acd5fadcff9/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
+170                android:value="com.google.firebase.components.ComponentRegistrar" />
+170-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/f822e49a80128d064da04acd5fadcff9/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
+171            <meta-data
+171-->[com.google.firebase:firebase-installations:17.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/1de72f94ea35ad763e60ee7219a58134/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+172                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+172-->[com.google.firebase:firebase-installations:17.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/1de72f94ea35ad763e60ee7219a58134/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+173                android:value="com.google.firebase.components.ComponentRegistrar" />
+173-->[com.google.firebase:firebase-installations:17.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/1de72f94ea35ad763e60ee7219a58134/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+174        </service>
+175
+176        <provider
+176-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:39:9-43:38
+177            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+177-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-102
+178            android:authorities="com.hibuoisang.flutterfirebasemessaginginitprovider"
+178-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-88
+179            android:exported="false"
+179-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-37
+180            android:initOrder="99" />
+180-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-35
+181        <provider
+181-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-19:20
+182            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+182-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-82
+183            android:authorities="com.hibuoisang.flutter.image_provider"
+183-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-74
+184            android:exported="false"
+184-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-37
+185            android:grantUriPermissions="true" >
+185-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-47
+186            <meta-data
+186-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-18:75
+187                android:name="android.support.FILE_PROVIDER_PATHS"
+187-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+188                android:resource="@xml/flutter_image_picker_file_paths" />
+188-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:18:17-72
+189        </provider>
+190
+191        <receiver
+191-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-15:40
+192            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+192-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-97
+193            android:exported="false" />
+193-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-37
+194        <receiver
+194-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-25:20
+195            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+195-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-101
+196            android:exported="false" >
+196-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+197            <intent-filter>
+197-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-24:29
+198                <action android:name="android.intent.action.BOOT_COMPLETED" />
+198-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-79
+198-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-76
+199                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+199-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-84
+199-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:25-81
+200                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+200-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-82
+200-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-79
+201                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+201-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-82
+201-->[:flutter_local_notifications] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-79
+202            </intent-filter>
+203        </receiver>
+204
+205        <activity
+205-->[:url_launcher_android] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-11:74
+206            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+206-->[:url_launcher_android] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-74
+207            android:exported="false"
+207-->[:url_launcher_android] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-37
+208            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+208-->[:url_launcher_android] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-71
+209
+210        <provider
+210-->[:share] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/share/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-16:20
+211            android:name="io.flutter.plugins.share.ShareFileProvider"
+211-->[:share] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/share/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-70
+212            android:authorities="com.hibuoisang.flutter.share_provider"
+212-->[:share] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/share/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-74
+213            android:exported="false"
+213-->[:share] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/share/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-37
+214            android:grantUriPermissions="true" >
+214-->[:share] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/share/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-47
+215            <meta-data
+215-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-18:75
+216                android:name="android.support.FILE_PROVIDER_PATHS"
+216-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+217                android:resource="@xml/flutter_share_file_paths" />
+217-->[:image_picker] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/image_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:18:17-72
+218        </provider>
+219
+220        <activity android:name="com.facebook.CustomTabMainActivity" />
+220-->[com.facebook.android:facebook-common:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/d6caf4b231be2f64d2dfeced8b04bb69/transformed/jetified-facebook-common-12.1.0/AndroidManifest.xml:34:9-71
+220-->[com.facebook.android:facebook-common:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/d6caf4b231be2f64d2dfeced8b04bb69/transformed/jetified-facebook-common-12.1.0/AndroidManifest.xml:34:19-68
+221        <!--
+222         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+223         with the application context. This config is merged in with the host app's manifest,
+224         but there can only be one provider with the same authority activated at any given
+225         point; so if the end user has two or more different apps that use Facebook SDK, only the
+226         first one will be able to use the provider. To work around this problem, we use the
+227         following placeholder in the authority to identify each host application as if it was
+228         a completely different provider.
+229        -->
+230        <provider
+230-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:39:9-42:40
+231            android:name="com.facebook.internal.FacebookInitProvider"
+231-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:40:13-70
+232            android:authorities="com.hibuoisang.FacebookInitProvider"
+232-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:41:13-72
+233            android:exported="false" />
+233-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:42:13-37
+234
+235        <receiver
+235-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:44:9-50:20
+236            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+236-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:45:13-86
+237            android:exported="false" >
+237-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:46:13-37
+238            <intent-filter>
+238-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:47:13-49:29
+239                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+239-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:48:17-95
+239-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:48:25-92
+240            </intent-filter>
+241        </receiver>
+242        <receiver
+242-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:51:9-57:20
+243            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+243-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:52:13-118
+244            android:exported="false" >
+244-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:53:13-37
+245            <intent-filter>
+245-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:54:13-56:29
+246                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+246-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:55:17-103
+246-->[com.facebook.android:facebook-core:12.1.0] /Users/vohoangtuit/.gradle/caches/transforms-3/b3f8839855f4e90e4679bba0bd20d21e/transformed/jetified-facebook-core-12.1.0/AndroidManifest.xml:55:25-100
+247            </intent-filter>
+248        </receiver>
+249        <receiver
+249-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:28:9-35:20
+250            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+250-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:29:13-78
+251            android:exported="true"
+251-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:30:13-36
+252            android:permission="com.google.android.c2dm.permission.SEND" >
+252-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:31:13-73
+253            <intent-filter>
+253-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-30:29
+254                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+254-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-81
+254-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-78
+255            </intent-filter>
+256        </receiver>
+257        <!--
+258             FirebaseMessagingService performs security checks at runtime,
+259             but set to not exported to explicitly avoid allowing another app to call it.
+260        -->
+261        <service
+261-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:41:9-48:19
+262            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+262-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:42:13-82
+263            android:directBootAware="true"
+263-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:43:13-43
+264            android:exported="false" >
+264-->[com.google.firebase:firebase-messaging:23.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/406a6699e5f439c53df4e349aa6106d9/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:44:13-37
+265            <intent-filter android:priority="-500" >
+265-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-21:29
+266                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+266-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-78
+266-->[:firebase_messaging] /Users/vohoangtuit/DATA/DEVELOP/TIN_NGUYEN/hibuosang/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-75
+267            </intent-filter>
+268        </service>
+269
+270        <provider
+270-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+271            android:name="com.google.firebase.provider.FirebaseInitProvider"
+271-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+272            android:authorities="com.hibuoisang.firebaseinitprovider"
+272-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+273            android:directBootAware="true"
+273-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+274            android:exported="false"
+274-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+275            android:initOrder="100" />
+275-->[com.google.firebase:firebase-common:20.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/fd6fe4d55df95242bce0069cb3fe7e18/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+276
+277        <service
+277-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/7655b5b85bb201186816d81ac2aff4e5/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+278            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+278-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/7655b5b85bb201186816d81ac2aff4e5/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+279            android:exported="false" >
+279-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/7655b5b85bb201186816d81ac2aff4e5/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+280            <meta-data
+280-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/7655b5b85bb201186816d81ac2aff4e5/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+281                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+281-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/7655b5b85bb201186816d81ac2aff4e5/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+282                android:value="cct" />
+282-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/7655b5b85bb201186816d81ac2aff4e5/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+283        </service>
+284        <service
+284-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+285            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+285-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+286            android:exported="false"
+286-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+287            android:permission="android.permission.BIND_JOB_SERVICE" >
+287-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+288        </service>
+289
+290        <receiver
+290-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+291            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+291-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+292            android:exported="false" />
+292-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/c03e6c7fbe1011f12dfcdcc5296e4cf4/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+293
+294        <activity
+294-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:23:9-27:75
+295            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+295-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:24:13-93
+296            android:excludeFromRecents="true"
+296-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:25:13-46
+297            android:exported="false"
+297-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:26:13-37
+298            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+298-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:27:13-72
+299        <!--
+300            Service handling Google Sign-In user revocation. For apps that do not integrate with
+301            Google Sign-In, this service will never be started.
+302        -->
+303        <service
+303-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:33:9-36:110
+304            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+304-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:34:13-89
+305            android:exported="true"
+305-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:35:13-36
+306            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+306-->[com.google.android.gms:play-services-auth:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/ffdea258756820c77e3cc78f55fbd2a6/transformed/jetified-play-services-auth-16.0.1/AndroidManifest.xml:36:13-107
+307
+308        <activity
+308-->[com.google.android.gms:play-services-base:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/5db2fd344da6aa2574a60572bb0d733a/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+309            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+309-->[com.google.android.gms:play-services-base:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/5db2fd344da6aa2574a60572bb0d733a/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+310            android:exported="false"
+310-->[com.google.android.gms:play-services-base:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/5db2fd344da6aa2574a60572bb0d733a/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+311            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+311-->[com.google.android.gms:play-services-base:16.0.1] /Users/vohoangtuit/.gradle/caches/transforms-3/5db2fd344da6aa2574a60572bb0d733a/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+312
+313        <meta-data
+313-->[com.google.android.gms:play-services-basement:17.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/e0ae04ba744906c83cb3e233d918ff12/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+314            android:name="com.google.android.gms.version"
+314-->[com.google.android.gms:play-services-basement:17.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/e0ae04ba744906c83cb3e233d918ff12/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+315            android:value="@integer/google_play_services_version" />
+315-->[com.google.android.gms:play-services-basement:17.0.0] /Users/vohoangtuit/.gradle/caches/transforms-3/e0ae04ba744906c83cb3e233d918ff12/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+316    </application>
+317
+318</manifest>

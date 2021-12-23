@@ -4,8 +4,7 @@ ThemeData dark = ThemeData(
   fontFamily: 'TitilliumWeb',
   primaryColor: Color(0xFF1B7FED),
   brightness: Brightness.dark,
-  bottomSheetTheme: BottomSheetThemeData(backgroundColor: Colors.transparent),
-  accentColor: Color(0xFF252525),
+  highlightColor: Color(0xFF252525),
   hintColor: Color(0xFFc7c7c7),
   pageTransitionsTheme: PageTransitionsTheme(builders: {
     TargetPlatform.android: ZoomPageTransitionsBuilder(),

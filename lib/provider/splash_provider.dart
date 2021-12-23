@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sixvalley_vendor_app/data/model/response/base/api_response.dart';
-import 'package:sixvalley_vendor_app/data/model/response/config_model.dart';
-import 'package:sixvalley_vendor_app/data/repository/splash_repo.dart';
-import 'package:sixvalley_vendor_app/helper/api_checker.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/config_model.dart';
+import 'package:flutter_sixvalley_ecommerce/data/repository/splash_repo.dart';
+import 'package:flutter_sixvalley_ecommerce/helper/api_checker.dart';
+import 'package:package_info/package_info.dart';
 
 class SplashProvider extends ChangeNotifier {
   final SplashRepo splashRepo;
@@ -11,39 +12,30 @@ class SplashProvider extends ChangeNotifier {
   ConfigModel _configModel;
   BaseUrls _baseUrls;
   CurrencyList _myCurrency;
-  CurrencyList _defaultCurrency;
   CurrencyList _usdCurrency;
+  CurrencyList _defaultCurrency;
   int _currencyIndex;
+  PackageInfo _packageInfo;
   bool _hasConnection = true;
   bool _fromSetting = false;
   bool _firstTimeConnectionCheck = true;
-  List<String> _unitList;
-  List<ColorList> _colorList;
-  int _unitIndex = 0;
-  int _colorIndex = 0;
-
-  List<String> get unitList => _unitList;
-  List<ColorList> get colorList => _colorList;
-  int get unitIndex => _unitIndex;
-  int get colorIndex =>_colorIndex;
-
 
   ConfigModel get configModel => _configModel;
   BaseUrls get baseUrls => _baseUrls;
   CurrencyList get myCurrency => _myCurrency;
-  CurrencyList get defaultCurrency => _defaultCurrency;
   CurrencyList get usdCurrency => _usdCurrency;
+  CurrencyList get defaultCurrency => _defaultCurrency;
   int get currencyIndex => _currencyIndex;
+  PackageInfo get packageInfo => _packageInfo;
   bool get hasConnection => _hasConnection;
   bool get fromSetting => _fromSetting;
   bool get firstTimeConnectionCheck => _firstTimeConnectionCheck;
-  bool _isLoading = false;
-  bool get isLoading => _isLoading;
 
   Future<bool> initConfig(BuildContext context) async {
     _hasConnection = true;
     ApiResponse apiResponse = await splashRepo.getConfig();
-    bool isSuccess;
+    bool isSuccess =true;
+    // todo check agian
     if (apiResponse.response != null && apiResponse.response.statusCode == 200) {
       _configModel = ConfigModel.fromJson(apiResponse.response.data);
       _baseUrls = ConfigModel.fromJson(apiResponse.response.data).baseUrls;
@@ -59,8 +51,8 @@ class SplashProvider extends ChangeNotifier {
           _usdCurrency = currencyList;
         }
       }
-
       getCurrencyData(_currencyCode);
+      _packageInfo = await PackageInfo.fromPlatform();
       isSuccess = true;
     } else {
       isSuccess = false;
@@ -87,25 +79,11 @@ class SplashProvider extends ChangeNotifier {
     });
   }
 
-  Future<List<int>> getColorList() async {
-    List<int> _colorIds = [];
-    _colorList = [];
-    for (ColorList item in _configModel.colors) {
-      _colorList.add(item);
-      _colorIds.add(item.id);
-    }
-    notifyListeners();
-    return _colorIds;
-  }
-
-
-
   void setCurrency(int index) {
     splashRepo.setCurrency(_configModel.currencyList[index].code);
     getCurrencyData(_configModel.currencyList[index].code);
     notifyListeners();
   }
-
 
   void initSharedPrefData() {
     splashRepo.initSharedData();
@@ -114,5 +92,14 @@ class SplashProvider extends ChangeNotifier {
   void setFromSetting(bool isSetting) {
     _fromSetting = isSetting;
   }
+
+  bool showIntro() {
+    return splashRepo.showIntro();
+  }
+
+  void disableIntro() {
+    splashRepo.disableIntro();
+  }
+
 
 }

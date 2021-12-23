@@ -1,8 +1,9 @@
 import 'dart:io';
+
 import 'package:dio/dio.dart';
+import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/dio/logging_interceptor.dart';
+import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sixvalley_vendor_app/data/datasource/remote/dio/logging_interceptor.dart';
-import 'package:sixvalley_vendor_app/utill/app_constants.dart';
 
 class DioClient {
   final String baseUrl;
@@ -18,7 +19,7 @@ class DioClient {
         this.sharedPreferences,
       }) {
     token = sharedPreferences.getString(AppConstants.TOKEN);
-    print(token);
+    print("NNNN $token");
     dio = dioC ?? Dio();
     dio
       ..options.baseUrl = baseUrl

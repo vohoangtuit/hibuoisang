@@ -1,39 +1,28 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:sixvalley_vendor_app/data/datasource/remote/dio/dio_client.dart';
-import 'package:sixvalley_vendor_app/data/datasource/remote/exception/api_error_handler.dart';
-import 'package:sixvalley_vendor_app/data/model/response/base/api_response.dart';
-import 'package:sixvalley_vendor_app/utill/app_constants.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/dio/dio_client.dart';
+import 'package:flutter_sixvalley_ecommerce/data/datasource/remote/exception/api_error_handler.dart';
+import 'package:flutter_sixvalley_ecommerce/data/model/response/base/api_response.dart';
+import 'package:flutter_sixvalley_ecommerce/utill/app_constants.dart';
 
-class OrderListRepo {
+class OrderRepo {
   final DioClient dioClient;
-  OrderListRepo({@required this.dioClient});
+
+  OrderRepo({@required this.dioClient});
 
   Future<ApiResponse> getOrderList() async {
     try {
-      final response = await dioClient.get(AppConstants.ORDER_LIST_URI);
+      final response = await dioClient.get(AppConstants.ORDER_URI);
       return ApiResponse.withSuccess(response);
     } catch (e) {
       return ApiResponse.withError(ApiErrorHandler.getMessage(e));
     }
   }
 
-  Future<ApiResponse> getOrderDetails(String orderID) async {
+  Future<ApiResponse> getOrderDetails(String orderID, String languageCode) async {
     try {
-      final response = await dioClient.get(AppConstants.ORDER_DETAILS+orderID);
-      return ApiResponse.withSuccess(response);
-    } catch (e) {
-      return ApiResponse.withError(ApiErrorHandler.getMessage(e));
-    }
-  }
-
-
-  Future<ApiResponse> orderStatus(int orderID , String status) async {
-    print('update order status ====>${orderID.toString()} =======>${status.toString()}');
-    try {
-      Response response = await dioClient.post(
-        '${AppConstants.UPDATE_ORDER_STATUS}$orderID',
-        data: {'_method': 'put', 'order_status': status},
+      final response = await dioClient.get(
+        AppConstants.ORDER_DETAILS_URI+orderID, options: Options(headers: {AppConstants.LANG_KEY: languageCode}),
       );
       return ApiResponse.withSuccess(response);
     } catch (e) {
@@ -41,21 +30,38 @@ class OrderListRepo {
     }
   }
 
-  Future<ApiResponse> getOrderStatusList() async {
+  Future<ApiResponse> getShippingList() async {
     try {
-      List<String> addressTypeList = [
-        'Select Order Status',
-    AppConstants.PENDING,
-    AppConstants.CONFIRMED,
-    AppConstants.PROCESSING,
-    AppConstants.OUT_FOR_DELIVERY,
-    AppConstants.DELIVERED,
-    AppConstants.RETURNED,
-    AppConstants.FAILED,
-    AppConstants.CANCELLED,
+      final response = await dioClient.get(AppConstants.SHIPPING_URI);
+      return ApiResponse.withSuccess(response);
+    } catch (e) {
+      return ApiResponse.withError(ApiErrorHandler.getMessage(e));
+    }
+  }
 
-      ];
-      Response response = Response(requestOptions: RequestOptions(path: ''), data: addressTypeList, statusCode: 200);
+
+  Future<ApiResponse> placeOrder(String addressID, String couponCode) async {
+    try {
+      final response = await dioClient.get(AppConstants.ORDER_PLACE_URI+'?address_id=$addressID&coupon_code=$couponCode');
+      return ApiResponse.withSuccess(response);
+    } catch (e) {
+      return ApiResponse.withError(ApiErrorHandler.getMessage(e));
+    }
+  }
+
+  Future<ApiResponse> getTrackingInfo(String orderID) async {
+    try {
+      final response = await dioClient.get(AppConstants.TRACKING_URI+orderID);
+      return ApiResponse.withSuccess(response);
+    } catch (e) {
+      return ApiResponse.withError(ApiErrorHandler.getMessage(e));
+    }
+  }
+
+  Future<ApiResponse> getShippingMethod(int sellerId) async {
+    try {
+      final response = sellerId==1?await dioClient.get('${AppConstants.GET_SHIPPING_METHOD}/$sellerId/admin'):
+      await dioClient.get('${AppConstants.GET_SHIPPING_METHOD}/$sellerId/seller');
       return ApiResponse.withSuccess(response);
     } catch (e) {
       return ApiResponse.withError(ApiErrorHandler.getMessage(e));
